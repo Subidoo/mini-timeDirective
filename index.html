@@ -4,9 +4,25 @@
 	<title></title>
 </head>
 <body ng-controller="mainCtrl">
-	Hello {{name}}
 
-<show-time></show-time>
+	Name: <input type="text" ng-model="changingName"></input>
+
+	<br/>
+
+	<show-time p-name="changingName"></show-time>
+
+	<hr/>
+	<div ng-repeat="personName in name">
+
+		<show-time p-name="personName"></show-time>
+	</div>
+	<hr/>
+
+	<h3>String Literal</h3>
+	<show-time p-name="p1"></show-time>
+	<show-time p-name="p2"></show-time>
+	<show-time p-name="p3"></show-time>
+
 
 
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
